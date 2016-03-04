@@ -11,6 +11,7 @@ var server2 = koa();
 var server3 = koa();
 var server4 = koa();
 var server5 = koa();
+var port = process.env.PORT || 3000;
 
 const jadeConfig = {
   // viewPath: path.resolve(__dirname, 'server/views'),
@@ -86,6 +87,6 @@ server.use(function * (next) {
     this.body = 'default Koa server';
 });
 
-server.listen(3000, function() {
+server.listen(port, function() {
     console.log('server listening port 3000');
 });
